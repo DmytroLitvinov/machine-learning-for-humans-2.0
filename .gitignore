@@ -168,3 +168,4 @@ cython_debug/
 # Ignore since Git LFS is required for that.
 modules/modules_1/credit/previous_application.csv.zip
 modules/modules_1/credit-20241208T135212Z-001.zip
+modules/modules_1/credit/application_data_processed.zip
