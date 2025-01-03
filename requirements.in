@@ -1,3 +1,4 @@
+pip-tools
 jupyterlab
 jupyter-resource-usage
 lckr-jupyterlab-variableinspector
@@ -5,3 +6,5 @@ pandas
 numpy
 matplotlib
 seaborn
+statsmodels
+scipy
