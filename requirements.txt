@@ -89,6 +89,8 @@ jinja2==3.1.4
     #   jupyterlab
     #   jupyterlab-server
     #   nbconvert
+joblib==1.4.2
+    # via scikit-learn
 json5==0.10.0
     # via jupyterlab-server
 jsonpointer==3.0.0
@@ -175,6 +177,7 @@ numpy==2.2.0
     #   matplotlib
     #   pandas
     #   patsy
+    #   scikit-learn
     #   scipy
     #   seaborn
     #   statsmodels
@@ -189,6 +192,7 @@ packaging==24.2
     #   jupyterlab-server
     #   matplotlib
     #   nbconvert
+    #   plotly
     #   statsmodels
 pandas==2.2.3
     # via
@@ -209,6 +213,8 @@ pip-tools==7.4.1
     # via -r requirements.in
 platformdirs==4.3.6
     # via jupyter-core
+plotly==5.24.1
+    # via -r requirements.in
 prometheus-client==0.21.1
     # via
     #   jupyter-resource-usage
@@ -274,9 +280,12 @@ rpds-py==0.22.3
     # via
     #   jsonschema
     #   referencing
+scikit-learn==1.6.1
+    # via -r requirements.in
 scipy==1.14.1
     # via
     #   -r requirements.in
+    #   scikit-learn
     #   statsmodels
 seaborn==0.13.2
     # via -r requirements.in
@@ -296,10 +305,14 @@ statsmodels==0.14.4
     # via -r requirements.in
 sympy==1.13.3
     # via -r requirements.in
+tenacity==9.0.0
+    # via plotly
 terminado==0.18.1
     # via
     #   jupyter-server
     #   jupyter-server-terminals
+threadpoolctl==3.5.0
+    # via scikit-learn
 tinycss2==1.4.0
     # via nbconvert
 tornado==6.4.2

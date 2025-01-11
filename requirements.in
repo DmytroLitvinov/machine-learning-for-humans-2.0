@@ -5,7 +5,9 @@ lckr-jupyterlab-variableinspector
 pandas
 numpy
 matplotlib
+plotly
 seaborn
 statsmodels
 scipy
 sympy
+scikit-learn
