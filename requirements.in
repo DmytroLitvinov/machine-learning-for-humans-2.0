@@ -1,7 +1,8 @@
 pip-tools
-jupyterlab
-jupyter-resource-usage
-lckr-jupyterlab-variableinspector
+ipython
+#jupyterlab
+#jupyter-resource-usage
+#lckr-jupyterlab-variableinspector
 pandas
 numpy
 matplotlib
