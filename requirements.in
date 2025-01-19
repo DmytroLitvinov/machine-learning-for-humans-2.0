@@ -12,3 +12,8 @@ statsmodels
 scipy
 sympy
 scikit-learn
+  joblib
+opendatasets
+pyarrow  # parquet
+traceml
+# ydata-profiling
