@@ -13,6 +13,8 @@ def analyze_dataframe(df):
             multicategory_columns.append(col)
 
     # Виведення результатів
+    print(f"Кількість рядків: {df.shape[0]}")
+    print(f"Кількість колонок: {df.shape[1]}")
     print(f"Кількість числових колонок: {len(numeric_columns)}")
     print(f"Кількість категоріальних колонок: {len(categorical_columns)}")
     print(f" - Бінарних: {len(binary_columns)}")

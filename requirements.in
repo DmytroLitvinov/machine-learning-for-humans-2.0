@@ -16,4 +16,4 @@ scikit-learn
 opendatasets
 pyarrow  # parquet
 traceml
-# ydata-profiling
+imbalanced-learn
