@@ -1,3 +1,9 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+
 def analyze_dataframe(df):
     numeric_columns = df.select_dtypes(include=['number']).columns.tolist()
     categorical_columns = df.select_dtypes(include=['object']).columns.tolist()
@@ -24,3 +30,15 @@ def analyze_dataframe(df):
     print("Категоріальні колонки:", categorical_columns)
     print("Бінарні колонки:", binary_columns)
     print("Мультикатегоріальні колонки:", multicategory_columns)
+
+def get_importance_df(model, X_train):
+    result = pd.DataFrame({
+        'feature': X_train.columns,
+        'importance': model.feature_importances_
+    }).sort_values('importance', ascending=False)
+    return result
+
+
+def render_feature_importance(importance_df, n_features=10):
+    plt.title('Feature Importance')
+    sns.barplot(data=importance_df.head(n_features), x='importance', y='feature')
