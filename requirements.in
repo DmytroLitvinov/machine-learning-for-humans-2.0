@@ -17,3 +17,5 @@ opendatasets
 pyarrow  # parquet
 traceml
 imbalanced-learn
+ydata-profiling
+ipywidgets
