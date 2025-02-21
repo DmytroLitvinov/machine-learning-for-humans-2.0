@@ -19,3 +19,6 @@ traceml
 imbalanced-learn
 ydata-profiling
 ipywidgets
+xgboost
+lightgbm
+optuna

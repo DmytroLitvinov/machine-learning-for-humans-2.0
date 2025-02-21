@@ -4,6 +4,8 @@
 #
 #    pip-compile requirements.in
 #
+alembic==1.14.1
+    # via optuna
 annotated-types==0.7.0
     # via pydantic
 asttokens==3.0.0
@@ -24,6 +26,8 @@ click==8.1.8
     # via
     #   opendatasets
     #   pip-tools
+colorlog==6.9.0
+    # via optuna
 comm==0.2.2
     # via ipywidgets
 contourpy==1.3.1
@@ -70,8 +74,14 @@ kaggle==1.6.17
     # via opendatasets
 kiwisolver==1.4.7
     # via matplotlib
+lightgbm==4.5.0
+    # via -r requirements.in
+mako==1.3.9
+    # via alembic
 markupsafe==3.0.2
-    # via jinja2
+    # via
+    #   jinja2
+    #   mako
 matplotlib==3.9.3
     # via
     #   -r requirements.in
@@ -95,7 +105,9 @@ numpy==2.1.3
     #   contourpy
     #   imagehash
     #   imbalanced-learn
+    #   lightgbm
     #   matplotlib
+    #   optuna
     #   pandas
     #   patsy
     #   phik
@@ -106,13 +118,17 @@ numpy==2.1.3
     #   statsmodels
     #   visions
     #   wordcloud
+    #   xgboost
     #   ydata-profiling
 opendatasets==0.1.22
+    # via -r requirements.in
+optuna==4.2.0
     # via -r requirements.in
 packaging==24.2
     # via
     #   build
     #   matplotlib
+    #   optuna
     #   plotly
     #   statsmodels
 pandas==2.2.3
@@ -173,7 +189,9 @@ pytz==2024.2
 pywavelets==1.8.0
     # via imagehash
 pyyaml==6.0.2
-    # via ydata-profiling
+    # via
+    #   optuna
+    #   ydata-profiling
 requests==2.32.3
     # via
     #   kaggle
@@ -188,9 +206,11 @@ scipy==1.15.1
     #   -r requirements.in
     #   imagehash
     #   imbalanced-learn
+    #   lightgbm
     #   phik
     #   scikit-learn
     #   statsmodels
+    #   xgboost
     #   ydata-profiling
 seaborn==0.13.2
     # via
@@ -202,6 +222,10 @@ six==1.17.0
     #   python-dateutil
 sklearn-compat==0.1.3
     # via imbalanced-learn
+sqlalchemy==2.0.38
+    # via
+    #   alembic
+    #   optuna
 stack-data==0.6.3
     # via ipython
 statsmodels==0.14.4
@@ -222,6 +246,7 @@ tqdm==4.67.1
     # via
     #   kaggle
     #   opendatasets
+    #   optuna
     #   ydata-profiling
 traceml==1.2.0
     # via -r requirements.in
@@ -235,8 +260,10 @@ typeguard==4.4.1
     # via ydata-profiling
 typing-extensions==4.12.2
     # via
+    #   alembic
     #   pydantic
     #   pydantic-core
+    #   sqlalchemy
     #   typeguard
 tzdata==2024.2
     # via pandas
@@ -256,6 +283,8 @@ widgetsnbextension==4.0.13
     # via ipywidgets
 wordcloud==1.9.4
     # via ydata-profiling
+xgboost==2.1.4
+    # via -r requirements.in
 ydata-profiling==4.12.2
     # via -r requirements.in
 
