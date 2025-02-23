@@ -26,6 +26,8 @@ click==8.1.8
     # via
     #   opendatasets
     #   pip-tools
+cloudpickle==3.1.1
+    # via hyperopt
 colorlog==6.9.0
     # via optuna
 comm==0.2.2
@@ -42,8 +44,12 @@ executing==2.1.0
     # via stack-data
 fonttools==4.55.3
     # via matplotlib
+future==1.0.0
+    # via hyperopt
 htmlmin==0.1.12
     # via ydata-profiling
+hyperopt==0.2.7
+    # via -r requirements.in
 idna==3.10
     # via requests
 imagehash==4.3.1
@@ -102,11 +108,14 @@ multimethod==1.12
     #   visions
     #   ydata-profiling
 networkx==3.4.2
-    # via visions
+    # via
+    #   hyperopt
+    #   visions
 numpy==2.1.3
     # via
     #   -r requirements.in
     #   contourpy
+    #   hyperopt
     #   imagehash
     #   imbalanced-learn
     #   lightgbm
@@ -169,6 +178,8 @@ ptyprocess==0.7.0
     # via pexpect
 pure-eval==0.2.3
     # via stack-data
+py4j==0.10.9.9
+    # via hyperopt
 pyarrow==19.0.0
     # via -r requirements.in
 pydantic==2.10.6
@@ -211,6 +222,7 @@ scikit-learn==1.6.1
 scipy==1.15.1
     # via
     #   -r requirements.in
+    #   hyperopt
     #   imagehash
     #   imbalanced-learn
     #   lightgbm
@@ -226,6 +238,7 @@ seaborn==0.13.2
     #   ydata-profiling
 six==1.17.0
     # via
+    #   hyperopt
     #   kaggle
     #   python-dateutil
 sklearn-compat==0.1.3
@@ -252,6 +265,7 @@ threadpoolctl==3.5.0
     #   scikit-learn
 tqdm==4.67.1
     # via
+    #   hyperopt
     #   kaggle
     #   opendatasets
     #   optuna
