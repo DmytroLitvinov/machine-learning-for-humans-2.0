@@ -4,8 +4,9 @@ ipython
 #jupyter-resource-usage
 #lckr-jupyterlab-variableinspector
 pandas
-numpy
+numpy<2
 matplotlib
+  pyqt6
 plotly
 seaborn
 statsmodels
@@ -24,3 +25,5 @@ lightgbm
 optuna
 mlxtend
 hyperopt
+darts
+  prophet
