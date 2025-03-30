@@ -27,3 +27,13 @@ mlxtend
 hyperopt
 darts
   prophet
+# Module 6
+langchain
+  numexpr
+langchain_openai
+huggingface_hub
+openai
+google-search-results
+langchain-community
+langchain_experimental
+langgraph
