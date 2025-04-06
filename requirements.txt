@@ -12,6 +12,7 @@ aiohttp==3.11.14
     # via
     #   fsspec
     #   langchain-community
+    #   langchain-tavily
 aiosignal==1.3.2
     # via aiohttp
 alembic==1.14.1
@@ -44,6 +45,7 @@ charset-normalizer==3.4.1
     # via requests
 click==8.1.8
     # via
+    #   duckduckgo-search
     #   opendatasets
     #   pip-tools
 cloudpickle==3.1.1
@@ -75,12 +77,15 @@ decorator==5.1.1
     # via ipython
 distro==1.9.0
     # via openai
+duckduckgo-search==2025.4.1
+    # via -r requirements.in
 executing==2.1.0
     # via stack-data
 filelock==3.18.0
     # via
     #   huggingface-hub
     #   torch
+    #   transformers
 fonttools==4.55.3
     # via matplotlib
 frozenlist==1.5.0
@@ -119,7 +124,12 @@ httpx==0.28.1
 httpx-sse==0.4.0
     # via langchain-community
 huggingface-hub==0.29.3
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   langchain-huggingface
+    #   sentence-transformers
+    #   tokenizers
+    #   transformers
 hyperopt==0.2.7
     # via -r requirements.in
 idna==3.10
@@ -174,6 +184,7 @@ langchain==0.3.21
     # via
     #   -r requirements.in
     #   langchain-community
+    #   langchain-tavily
 langchain-community==0.3.20
     # via
     #   -r requirements.in
@@ -183,14 +194,20 @@ langchain-core==0.3.49
     #   langchain
     #   langchain-community
     #   langchain-experimental
+    #   langchain-huggingface
     #   langchain-openai
+    #   langchain-tavily
     #   langchain-text-splitters
     #   langgraph
     #   langgraph-checkpoint
     #   langgraph-prebuilt
 langchain-experimental==0.3.4
     # via -r requirements.in
+langchain-huggingface==0.1.2
+    # via -r requirements.in
 langchain-openai==0.3.11
+    # via -r requirements.in
+langchain-tavily==0.1.5
     # via -r requirements.in
 langchain-text-splitters==0.3.7
     # via langchain
@@ -217,6 +234,8 @@ lightning-utilities==0.14.1
     #   torchmetrics
 llvmlite==0.44.0
     # via numba
+lxml==5.3.1
+    # via duckduckgo-search
 mako==1.3.9
     # via alembic
 markupsafe==3.0.2
@@ -251,8 +270,12 @@ multimethod==1.12
     # via
     #   visions
     #   ydata-profiling
+mypy==1.15.0
+    # via langchain-tavily
 mypy-extensions==1.0.0
-    # via typing-inspect
+    # via
+    #   mypy
+    #   typing-inspect
 networkx==3.4.2
     # via
     #   hyperopt
@@ -303,6 +326,7 @@ numpy==1.26.4
     #   tbats
     #   tensorboardx
     #   torchmetrics
+    #   transformers
     #   triad
     #   utilsforecast
     #   visions
@@ -341,6 +365,7 @@ packaging==24.2
     #   statsmodels
     #   tensorboardx
     #   torchmetrics
+    #   transformers
     #   utilsforecast
     #   xarray
 pandas==2.2.2
@@ -374,6 +399,7 @@ pillow==11.0.0
     # via
     #   imagehash
     #   matplotlib
+    #   sentence-transformers
     #   visions
     #   wordcloud
 pip-tools==7.4.1
@@ -384,6 +410,8 @@ pmdarima==2.0.4
     # via
     #   darts
     #   tbats
+primp==0.14.0
+    # via duckduckgo-search
 prompt-toolkit==3.0.48
     # via ipython
 propcache==0.3.0
@@ -456,9 +484,12 @@ pyyaml==6.0.2
     #   langchain-core
     #   optuna
     #   pytorch-lightning
+    #   transformers
     #   ydata-profiling
 regex==2024.11.6
-    # via tiktoken
+    # via
+    #   tiktoken
+    #   transformers
 requests==2.32.3
     # via
     #   darts
@@ -470,9 +501,12 @@ requests==2.32.3
     #   langsmith
     #   requests-toolbelt
     #   tiktoken
+    #   transformers
     #   ydata-profiling
 requests-toolbelt==1.0.0
     # via langsmith
+safetensors==0.5.3
+    # via transformers
 scikit-learn==1.6.1
     # via
     #   -r requirements.in
@@ -481,6 +515,7 @@ scikit-learn==1.6.1
     #   mlxtend
     #   pmdarima
     #   pyod
+    #   sentence-transformers
     #   shap
     #   sklearn-compat
     #   tbats
@@ -497,6 +532,7 @@ scipy==1.15.1
     #   pmdarima
     #   pyod
     #   scikit-learn
+    #   sentence-transformers
     #   shap
     #   statsforecast
     #   statsmodels
@@ -507,6 +543,8 @@ seaborn==0.13.2
     # via
     #   -r requirements.in
     #   ydata-profiling
+sentence-transformers==4.0.1
+    # via langchain-huggingface
 shap==0.47.0
     # via darts
 six==1.17.0
@@ -565,10 +603,15 @@ threadpoolctl==3.5.0
     #   statsforecast
 tiktoken==0.9.0
     # via langchain-openai
+tokenizers==0.21.1
+    # via
+    #   langchain-huggingface
+    #   transformers
 torch==2.4.1
     # via
     #   darts
     #   pytorch-lightning
+    #   sentence-transformers
     #   torchmetrics
 torchmetrics==1.6.3
     # via pytorch-lightning
@@ -584,8 +627,10 @@ tqdm==4.67.1
     #   optuna
     #   prophet
     #   pytorch-lightning
+    #   sentence-transformers
     #   shap
     #   statsforecast
+    #   transformers
     #   ydata-profiling
 traceml==1.2.0
     # via -r requirements.in
@@ -595,6 +640,10 @@ traitlets==5.14.3
     #   ipython
     #   ipywidgets
     #   matplotlib-inline
+transformers==4.50.3
+    # via
+    #   langchain-huggingface
+    #   sentence-transformers
 triad==0.9.8
     # via
     #   adagio
@@ -609,10 +658,12 @@ typing-extensions==4.12.2
     #   huggingface-hub
     #   langchain-core
     #   lightning-utilities
+    #   mypy
     #   openai
     #   pydantic
     #   pydantic-core
     #   pytorch-lightning
+    #   sentence-transformers
     #   shap
     #   sqlalchemy
     #   torch

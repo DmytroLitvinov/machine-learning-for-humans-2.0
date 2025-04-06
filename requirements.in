@@ -27,6 +27,7 @@ mlxtend
 hyperopt
 darts
   prophet
+
 # Module 6
 langchain
   numexpr
@@ -35,5 +36,9 @@ huggingface_hub
 openai
 google-search-results
 langchain-community
+langchain-huggingface
+langchain-tavily
 langchain_experimental
+langchain_community
+duckduckgo_search
 langgraph
