@@ -46,6 +46,7 @@ charset-normalizer==3.4.1
 click==8.1.8
     # via
     #   duckduckgo-search
+    #   nltk
     #   opendatasets
     #   pip-tools
 cloudpickle==3.1.1
@@ -77,7 +78,7 @@ decorator==5.1.1
     # via ipython
 distro==1.9.0
     # via openai
-duckduckgo-search==2025.4.1
+duckduckgo-search==8.0.0
     # via -r requirements.in
 executing==2.1.0
     # via stack-data
@@ -166,6 +167,7 @@ joblib==1.4.2
     #   darts
     #   imbalanced-learn
     #   mlxtend
+    #   nltk
     #   phik
     #   pmdarima
     #   pyod
@@ -283,6 +285,8 @@ networkx==3.4.2
     #   visions
 nfoursid==1.0.1
     # via darts
+nltk==3.9.1
+    # via -r requirements.in
 numba==0.61.0
     # via
     #   pyod
@@ -488,6 +492,7 @@ pyyaml==6.0.2
     #   ydata-profiling
 regex==2024.11.6
     # via
+    #   nltk
     #   tiktoken
     #   transformers
 requests==2.32.3
@@ -622,6 +627,7 @@ tqdm==4.67.1
     #   huggingface-hub
     #   hyperopt
     #   kaggle
+    #   nltk
     #   openai
     #   opendatasets
     #   optuna

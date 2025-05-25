@@ -42,3 +42,4 @@ langchain_experimental
 langchain_community
 duckduckgo_search
 langgraph
+nltk
